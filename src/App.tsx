@@ -6,6 +6,14 @@ import Form from './components/Form';
 import Results from './components/Result';
 import { useState } from "react";
 
+type ResultsStateType = {
+  country: string;
+  cityName: string;
+  temperature: string;
+  conditionText: string;
+  icon: string;
+}
+
 function App() {
   const [city, setCity] = useState<string>("");
   const [results, setResults] = useState({
