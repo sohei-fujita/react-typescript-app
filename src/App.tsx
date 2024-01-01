@@ -16,7 +16,7 @@ type ResultsStateType = {
 
 function App() {
   const [city, setCity] = useState<string>("");
-  const [results, setResults] = useState({
+  const [results, setResults] = useState<ResultsStateType>({
     country: "",
     cityName: "",
     temperature: "",
