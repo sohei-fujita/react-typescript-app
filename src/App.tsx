@@ -21,7 +21,7 @@ function App() {
     cityName: "",
     temperature: "",
     conditionText: "",
-    icon: ""
+    icon: "",
   });
 
   const getWeather = (e: any) => {
