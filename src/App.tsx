@@ -6,8 +6,24 @@ import Form from './components/Form';
 import Results from './components/Result';
 import { useState } from "react";
 
+type ResultsStateType = {
+  country: string;
+  cityName: string;
+  temperature: string;
+  conditionText: string;
+  icon: string;
+}
+
 function App() {
   const [city, setCity] = useState<string>("");
+  const [results, setResults] = useState<ResultsStateType>({
+    country: "",
+    cityName: "",
+    temperature: "",
+    conditionText: "",
+    icon: ""
+  });
+
   const getWeather = (e: any) => {
     e.preventDefault();
     fetch("https://api.weatherapi.com/v1/current.json?key=f39bb18e7aab44aeb78115328232912&q=London&aqi=no")
