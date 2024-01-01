@@ -28,7 +28,15 @@ function App() {
     e.preventDefault();
     fetch("https://api.weatherapi.com/v1/current.json?key=f39bb18e7aab44aeb78115328232912&q=London&aqi=no")
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => {
+        setResults({
+          country: "",
+          cityName: "",
+          temperature: "",
+          conditionText: "",
+          icon: "",
+        })
+      })
   }
 
   return (
