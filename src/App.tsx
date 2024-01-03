@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <Title />
       <Form setCity={setCity} getWeather={getWeather}/>
-      <Results />
+      <Results results={results}/>
     </div>
   );
 }
